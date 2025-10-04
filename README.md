@@ -1,7 +1,7 @@
-# PolymersGPT v1.0 beta
+# PolymersGPT v1.0 Beta
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Version](https://img.shields.io/badge/version-5.0-green.svg)
+![Version](https://img.shields.io/badge/version-1.0-beta-yellow.svg)
 ![Solana](https://img.shields.io/badge/Solana-Blockchain-orange.svg)
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
@@ -24,7 +24,7 @@
 
 ## Overview
 
-PolymersGPT v5.0 combines cutting-edge AI, blockchain, and IoT to create a decentralized platform where users can:
+PolymersGPT v1.0 Beta combines cutting-edge AI, blockchain, and IoT to create a decentralized platform where users can:
 - Engage with **multi-LLM AI agents** (e.g., ChatGPT-5, OpenAI, Grok, Claude 3.5, Llama3.1) for Finance, ESG/Recycling, Developer, Business, and Creative tasks.
 - Earn **PLY tokens** through AI interactions, ESG/e-waste contributions, prompt creation, staking, and DAO governance.
 - Mint, buy, and sell tokenized **prompt NFTs** via Metaplex.
@@ -32,7 +32,7 @@ PolymersGPT v5.0 combines cutting-edge AI, blockchain, and IoT to create a decen
 - Track ESG metrics and e-waste via **Helium IoT** sensors and **Pyth oracles**.
 - Authenticate securely with **Privy.io DID**.
 
-> 📖 **Full Documentation**: [PolymersGPT v1.0 Docs](https://docs.polymernetwork.org/polymersgpt/) (replace with your docs URL).
+> 📖 **Full Documentation**: [PolymersGPT v1.0 Beta Docs](https://docs.polymernetwork.org/polymersgpt/) (replace with your docs URL).
 
 ---
 
@@ -56,9 +56,7 @@ PolymersGPT is built on three layers, integrating AI, blockchain, and IoT:
 graph TD
     A[Frontend: React, Chat UX] -->|API Calls| B[Backend: Supabase, Neon, Redis]
     B -->|On-Chain Logic| C[Blockchain: Solana, Anchor, Metaplex]
-    C -->|IoT & Oracles| D[Helium……
-
-System: IoT, Pyth Oracles]
+    C -->|IoT & Oracles| D[Helium IoT, Pyth Oracles]
     C -->|DeFi & Payments| E[Jupiter, Raydium, Solana Pay]
     B -->|AI Orchestration| F[Multi-LLM: GPT-5, Grok, Claude, etc.]
     C -->|DID Auth| G[Privy.io]
@@ -136,7 +134,7 @@ sequenceDiagram
    ```
 7. **Connect Wallet**: Use Phantom/Solflare to interact with PLY tokens and NFTs.
 
-> ℹ️ **Note**: Ensure Solana wallet has SOL for gas fees. See [Setup Guide](https://docs.polymersnetwork.org/polymersgetp/setup) for advanced configurations.
+> ℹ️ **Note**: Ensure Solana wallet has SOL for gas fees. See [Setup Guide](https://docs.polymernetwork.org/polymersgpt/setup) for advanced configurations.
 
 ---
 
@@ -174,8 +172,7 @@ pub mod polymersgpt {
         let user_account = &mut ctx.accounts.user_account;
         let tx_account = &mut ctx.accounts.transaction_account;
         let amount = 10_000;
-        require!(user_account.ply_balance >= amount ||ユーザー
-System: user_account.free_messages > 0, ErrorCode::InsufficientPly);
+        require!(user_account.ply_balance >= amount || user_account.free_messages > 0, ErrorCode::InsufficientPly);
         if user_account.free_messages > 0 {
             user_account.free_messages -= 1;
         } else {
@@ -225,7 +222,7 @@ pub enum ErrorCode {
   ```json
   {
     "type": "action",
-    "endpoint": "https://api.polymersprotocol.org/polymersgtp/action",
+    "endpoint": "https://api.polymernetwork.org/polymersgpt/action",
     "payload": {
       "instruction": "send_message",
       "agent_id": 1,
@@ -263,7 +260,7 @@ anchor deploy --provider.cluster mainnet
 anchor idl init --filepath target/idl/polymersgpt.json --provider.cluster mainnet
 ```
 
-> 📖 **Full Details**: See [Polymers Anchor Program Docs](https://docs.polymernetwork.org/anchor) for schemas, CPIs, and testing.
+> 📖 **Full Details**: See [Polymers Anchor Program Docs](https://docs.polymernetwork.org/polymersgpt/anchor) for schemas, CPIs, and testing.
 
 ---
 
@@ -272,7 +269,7 @@ anchor idl init --filepath target/idl/polymersgpt.json --provider.cluster mainne
 ### Endpoints
 - **POST /message**: Send a message to an AI agent.
   ```javascript
-  const response = await fetch('https://api.polymersprotocol.org/chat/message', {
+  const response = await fetch('https://api.polymernetwork.org/polymersgpt/chat/message', {
     method: 'POST',
     headers: { 'Authorization': 'Bearer <privy-did-token>', 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -285,7 +282,7 @@ anchor idl init --filepath target/idl/polymersgpt.json --provider.cluster mainne
   ```
 - **POST /mint_nft**: Mint a prompt as an NFT.
   ```javascript
-  const response = await fetch('https://api.polymersprotocol.org/mint_nft', {
+  const response = await fetch('https://api.polymernetwork.org/polymersgpt/mint_nft', {
     method: 'POST',
     headers: { 'Authorization': 'Bearer <privy-did-token>', 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -297,7 +294,7 @@ anchor idl init --filepath target/idl/polymersgpt.json --provider.cluster mainne
   console.log(data); // { nftId: 'xyz', txSignature: '...' }
   ```
 
-> 📚 **Full API Docs**: See [API Reference](https://docs.polymersnetwork.org/polymersgpt/api) for all endpoints and schemas.
+> 📚 **Full API Docs**: See [API Reference](https://docs.polymernetwork.org/polymersgpt/api) for all endpoints and schemas.
 
 ---
 
@@ -335,7 +332,7 @@ anchor idl init --filepath target/idl/polymersgpt.json --provider.cluster mainne
   });
   ```
 
-> 💡 **Tip**: Use Dialect Blinks for chat-triggered transactions. See [Developer Guide](https://docs.polymersnetwork.org/developers) for more.
+> 💡 **Tip**: Use Dialect Blinks for chat-triggered transactions. See [Developer Guide](https://docs.polymernetwork.org/polymersgpt/developers) for more.
 
 ---
 
